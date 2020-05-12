@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        .navbar-brand::before{
+            content: url('./assets/bacteria.png'); 
+            padding-right: 10px;
+        }
+
+        #search{
+            color:tomato ;
+        }
+        #search:hover{
+            background-color: tomato;
+            color: wheat;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        .card-title{
+            margin-top: 10vh;
+            font-size: 1.5rem;
+        }
+        .card-image{
+            margin-top: 5vh;
+        }
+     .card:hover{
+         transition:transform .2s ease-in-out;
+         transform: scale(1.03);
+     }
+     .center{
+       text-align: center;
+     }
+     table{
+       text-align: center;
+     }
+     .goup{
+       position: fixed;
+       bottom: 2vh;
+       z-index: 100;
+       border: transparent;
+       outline: none;
+       width: 50px;
+       height: 50px;
+       left: 88vw;
+       border-radius:50% ;
+       background-color: black;
+       color: white;
+     }
+     ul{
+       padding-right: 100px;
+     }
+     li{
+       list-style: none;
+       vertical-align: baseline;
+       padding-right: 20px;
+     }
+    </style>
+</head>
+<body onload="fetch()">
+    <nav class="navbar  justify-content-between" style="background: wheat;">
+        
+        <a class="navbar-brand " style="padding-left: 10vw;">COVID-19 Tracker</a>
+        <ul style="display: flex;">
+          <li>Home</li>
+          <li>Home</li>
+          <li>Home</li>
+          <li>Home</li>
+          <li>Home</li>
+        </ul>
+      
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid " data-aos="fade-right"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="700"  style="background: tomato; color: wheat;margin-bottom: 0;">
+        <div class="container">
+          <h1 class="display-4 animate__fadeInLeft">About COVID-19</h1>
+          <p class="lead">The COVID-19 pandemic, also known as the coronavirus pandemic, is an ongoing pandemic of coronavirus disease 2019 (COVID‑19) caused by severe acute respiratory syndrome coronavirus 2 (SARS‑CoV‑2). The outbreak was first identified in Wuhan, China, in early December 2019.The World Health Organization declared the outbreak a Public Health Emergency of International Concern on 30 January, and a pandemic on 11 March.As of 10 May 2020, more than 4.02 million cases of COVID-19 have been reported in over 187 countries and territories, resulting in more than 279,000 deaths. More than 1.37 million people have recovered.</p>
+          <a class="btn btn-success btn-lg" href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019" role="button">Learn more</a>
+
+        </div>
+      </div>
+
+      <div class="jumbotron jumbotron-fluid " data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="700" style="background-color:cadetblue; padding: 5vh; color: white;margin: 0;"   >
+        <div class="container">
+          <h1 class="display-4 animate__fadeInLeft">Symptoms:</h1>
+            <p class="lead">
+                COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.
+            </p>
+            <div class="mx-auto">
+                <p>
+                    Less common symptoms:
+                    <ul>
+                        <li>aches and pains</li>
+                        <li>sore throat</li>
+                        <li>diarrhoea</li>
+                        <li>conjunctivitis</li>
+                        <li>headache</li>
+                        <li>loss of taste or smell</li>
+                        <li>a rash on skin, or discolouration of fingers or toes</li>
+                    </ul> 
+                    Most common symptoms:
+                    <ul>
+                        <li>dry cough</li>
+                        <li>tiredness</li>
+                         <li>fever</li>
+                    </ul>
+                    Serious symptoms:
+                    <ul>
+                        <li>difficulty breathing or shortness of breath</li>
+                        <li>chest pain or pressure</li>
+                        <li>loss of speech or movement</li>
+                    </ul>
+              </p>
+            </div>
+        </div>
+      </div>
+
+      <!-- cards -->
+
+      <div style="background-color: crimson;padding-bottom: 5vh;">
+        <div class="container">
+            <h1 style="text-align: center;color: white; padding-top: 5vh;">Prevention</h1>
+            <br>
+            <div class="row" data-aos="zoom-in" >
+              <div class="col-sm-4" style="padding: 1vh;">
+                <div class="card" style="height: 350px; text-align: center;">
+                  <div class="card-body">
+                      <img src="./assets/color.png" class="card-image">
+                    <h5 class="card-title" >Stay Home</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4" style="padding: 1vh;">
+                <div class="card" style="height: 350px; text-align: center;">
+                  <div class="card-body">
+                    <img src="./assets/water-tap.png" class="card-image">
+                    <h5 class="card-title" >Wash Hands Often</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4"  style="padding: 1vh;">
+                <div class="card" style="height: 350px;text-align: center;">
+                  <div class="card-body">
+                    <img src="./assets/sickness.png" class="card-image">
+                    <h5 class="card-title" >Cover Your Cough</h5>
+                 
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4"  style="padding: 1vh;">
+                <div class="card" style="text-align: center;height: 350px;" >
+                  <div class="card-body">
+                    <img src="./assets/security.png" class="card-image">
+                    <h5 class="card-title" >Sick? Call The Helpline</h5>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4"  style="padding: 1vh;">
+                <div class="card" style="text-align: center;height: 350px;">
+                  <div class="card-body">
+                    <img src="./assets/safe.png" class="card-image">
+                    <h5 class="card-title" >Keep A Safe Distance</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4"  style="padding: 1vh;">
+                <div class="card" style="text-align: center;height: 350px;">
+                  <div class="card-body">
+                    <img src="./assets/touch.png" class="card-image">
+                    <h5 class="card-title" >Don’t Touch Your Eyes, Nose or Mouth.</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+      
+      
+       
+        </div>
+      </div>
+
+      <div class="jumbotron" style="background-color: #4fe576;color: black;" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="500">
+          <div class="container">
+            <h1 class="display-4">Treatment</h1>
+            <p class="lead">Self-care:</p><p>
+                If you feel sick you should rest, drink plenty of fluid, and eat nutritious food. Stay in a separate room from other family members, and use a dedicated bathroom if possible. Clean and disinfect frequently touched surfaces.
+                Everyone should keep a healthy lifestyle at home. Maintain a healthy diet, sleep, stay active, and make social contact with loved ones through the phone or internet. Children need extra love and attention from adults during difficult times. Keep to regular routines and schedules as much as possible.
+                It is normal to feel sad, stressed, or confused during a crisis. Talking to people you trust, such as friends and family, can help. If you feel overwhelmed, talk to a health worker or counsellor.</p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-coronaviruses#:~:text=protect" role="button">Learn more</a>
+                  </p>
+                <hr class="my-4">
+            <p class="lead">Medical-Treatment:</p><p>
+                If you have mild symptoms and are otherwise healthy, self-isolate and contact your medical provider or a COVID-19 information line for advice.
+                Seek medical care if you have a fever, a cough, and difficulty breathing. Call in advance.</p>
+            <p class="lead">
+                
+              <a class="btn btn-primary btn-lg" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-coronaviruses#:~:text=treatment" role="button">Learn more</a>
+            </p>
+          </div>
+   
+      </div>
+      <div class="container" data-aos="fade-right"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500" >
+        <h1 class="center">Statistics</h1>
+        <br>
+        <p class="center">Press Ctrl+F to find a specific country</p>
+
+        <table class="table table-responsive" id="tval">
+          <thead class="thead-dark">
+            <tr >
+              <th scope="col">Countries</th>
+              <th scope="col">New Confirmed</th>
+              <th scope="col">Total Confirmed</th>
+              <th scope="col">New Deaths</th>
+              <th scope="col">Total Deaths</th>
+              <th scope="col">New Recovered</th>
+              <th scope="col">Total Recovered</th>
+            </tr>
+          </thead>
+         
+        </table>
+      </div>
+
+      <button class="goup" onclick="goup()"><i class="fas fa-arrow-up"></i></button>
+      
+    
+      <footer style="text-align: center;background-color: coral;padding: 1vh 0 1vh 0;" >
+        Helpline Number:+91-11-23978046
+      </footer>
+
+
+      <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="app.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+      <script>
+        AOS.init();
+      </script>
+</body>
+</html>
